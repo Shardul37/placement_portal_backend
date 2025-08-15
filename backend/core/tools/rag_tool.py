@@ -12,9 +12,12 @@ load_dotenv()
 class RAGTool(BaseTool):
     name: str = "RAG_Search_Tool"
     description: str = (
-        "This tool performs a semantic search on unstructured text data "
-        "like job requirements and company details. Use it for questions "
-        "about skills, technologies, company culture, or other textual information."
+        "This tool performs semantic search on job descriptions, company information, and requirements. "
+        "Use this tool for questions about: job skills and technologies required, company culture and work environment, "
+        "specific job responsibilities, qualification requirements, company background and history, "
+        "work policies (WFH, bonds, training), selection processes, and any text-based information. "
+        "Examples: 'What skills does Google look for?', 'Tell me about Microsoft's work culture', "
+        "'Which companies require Python skills?', 'What is the selection process for TCS?'."
     )
 
     async def _arun(self, query: str) -> str:
