@@ -5,8 +5,10 @@ class SQLTool(BaseTool):
     name: str = "SQL_Query_Executor"
     description: str = (
         "This tool executes SQL queries on the placements database. "
-        "It's useful for questions that require filtering, counting, or aggregating data, "
-        "like 'how many companies offer jobs in Mumbai?' or 'what is the average CTC?'"
+        "Use this tool for questions that require filtering, counting, aggregating, or comparing numerical data. "
+        "Examples: 'How many companies visited in Phase 1?', 'What is the average CTC for software roles?', "
+        "'Which companies offer jobs in Mumbai?', 'Show me all companies with CTC above 15 lakhs', "
+        "'Companies that visited in Phase 2 vs Phase 1', 'Highest paying companies by location'."
     )
 
     async def _arun(self, query: str) -> str:
